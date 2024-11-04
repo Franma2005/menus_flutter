@@ -13,15 +13,19 @@ class HomeScreen extends StatelessWidget {
         title: const Text("LISTVIEW TIPO 1"),
       ),
       body: ListView(
-        children: const [
-          ListTile(
+        children: [
+          ...options.map((item) => ListTile(
+            leading: const Icon( Icons.abc_rounded),
+            title: Text(item),
+          )),
+          /*ListTile(
             leading: Icon( Icons.abc_rounded),
             title: Text("HOLA MUNDO"),
           ),
           Text("HOLA MUNDO"),
           Text("HOLA MUNDO"),
           Text("HOLA MUNDO")
-        ],
+        */],
       ));
   }
 }
