@@ -15,7 +15,7 @@ class HomeScreen extends StatelessWidget {
       body: ListView(
         children: [
           ...options.map((item) => ListTile(
-            leading: const Icon( Icons.abc_rounded),
+            trailing: const Icon( Icons.arrow_forward_ios_outlined),
             title: Text(item),
           )),
           /*ListTile(
