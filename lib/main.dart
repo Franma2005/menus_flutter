@@ -23,8 +23,8 @@ class MyApp extends StatelessWidget {
       ),
       //home: const Listview2Screen(),
       initialRoute: AppRoutes.initialRoute,
-      routes: AppRoutes.routes,
-      onGenerateRoute: AppRoutes().routes,
+      routes: AppRoutes.getAppRoutes(),
+      onGenerateRoute: AppRoutes.onGenerateRoute,
 
     );
   }

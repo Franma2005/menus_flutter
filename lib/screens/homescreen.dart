@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:practica/app_routes/routes.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -12,14 +13,14 @@ class HomeScreen extends StatelessWidget {
         ),
         body: ListView.separated(
             itemBuilder: (context, index) => ListTile(
-                  leading: const Icon(Icons.three_g_mobiledata_outlined),
-                  title: const Text("NOMBRE DE RUTA"),
+                  leading: Icon(AppRoutes.MenuOptions[index].icon),
+                  title: Text(AppRoutes.MenuOptions[index].name),
                   onTap: () {
-                    Navigator.pushNamed(context, 'paquet');
+                    Navigator.pushNamed(context, AppRoutes.MenuOptions[index].route);
 
                   },
                 ),
             separatorBuilder: (context, index) => const Divider(),
-            itemCount: 5));
+            itemCount: AppRoutes.MenuOptions.length));
   }
 }
