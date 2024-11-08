@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class HomeScreen extends StatelessWidget {
+class Listview1Screen extends StatelessWidget {
 
-  final options = const["TARGARUEB", "STARK", "LANNISTER", "BARATHEON"]
+  final options = const["TARGARUEB", "STARK", "LANNISTER", "BARATHEON"];
    
-  const HomeScreen({Key? key}) : super(key: key);
+  const Listview1Screen({super.key});
   
   @override
   Widget build(BuildContext context) {

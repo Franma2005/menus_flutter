@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'screens/listview2_screen.dart';
+import 'package:practica/app_routes/routes.dart';
+import 'package:practica/screens/screen.dart';
+
+
 
 void main() {
   runApp(const MyApp());
@@ -18,9 +21,13 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const HomeScreen2(),
+      //home: const Listview2Screen(),
+      initialRoute: AppRoutes.initialRoute,
+      routes: AppRoutes.routes,
+      onGenerateRoute: AppRoutes().routes,
+
     );
   }
 }
 
-}
+
