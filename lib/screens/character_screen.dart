@@ -20,8 +20,8 @@ class CharacterScreen extends StatelessWidget {
 
       body: Column(
         children: [
-          //CardList2Image(image),
-          //CardList2Description(description),
+          CardList2Image(image: image),
+          CardList2Description(description: description),
         ],
       ),
     );

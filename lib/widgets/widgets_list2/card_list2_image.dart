@@ -10,9 +10,10 @@ class CardList2Image extends StatelessWidget {
     return Card(
       child: Column(
         children: [
-          //Image(
-            //image: image
-          //)
+          FadeInImage(
+            image: NetworkImage(image),
+            placeholder: const AssetImage("assets/amalie-steiness.gif"),
+          )
         ],
       ),
     );
