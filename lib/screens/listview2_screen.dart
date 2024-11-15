@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:practica/app_routes/routes.dart';
 
 class Listview2Screen extends StatelessWidget {
-
-  final options = const["TARGARUEB", "STARK", "LANNISTER", "BARATHEON"];
-   
   const Listview2Screen({super.key});
   
   @override
@@ -14,15 +12,14 @@ class Listview2Screen extends StatelessWidget {
       ),
       body: ListView.separated(
       itemBuilder: (context, index) => ListTile(
-            trailing: const Icon( Icons.arrow_forward_ios_outlined),
-            title: Text(options[index]),
+            trailing: Icon(AppRoutes.MenuListOptions[index].icon),
+            title: Text(AppRoutes.MenuListOptions[index].name),
             onTap: () {
-              final casa = options[index];
-              print(casa);
+              Navigator.pushNamed(context, AppRoutes.MenuListOptions[index].route);
             }
       ),
         separatorBuilder: (context, index) => const Divider(),
-        itemCount: options.length)
-      );
+        itemCount: 4,
+      ));
   }
 }
