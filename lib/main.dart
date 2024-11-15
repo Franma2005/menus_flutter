@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:practica/app_routes/routes.dart';
-import 'package:practica/screens/screen.dart';
+import 'package:practica/theme/app_theme.dart';
+
 
 
 
@@ -17,10 +18,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
+      theme: AppTheme.lightTheme,
       //home: const Listview2Screen(),
       initialRoute: AppRoutes.initialRoute,
       routes: AppRoutes.getAppRoutes(),
