@@ -24,6 +24,11 @@ class CharacterScreen extends StatelessWidget {
           CardList2Description(description: description),
         ],
       ),
+
+      floatingActionButton: FloatingActionButton(
+        child: const Icon(Icons.close),
+        onPressed: () => Navigator.pop(context),
+      ),
     );
   }
 }
